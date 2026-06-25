@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for civilisation in all_civilisation %}
+
+<div class="lien_civilisation">
+<a href="{% url 'detail_civilisation' civilisation.id %}">{{civilisation.nom}}</a>
+</div>
+
+{% empty %}
+
+<p>Pas de civilisation disponible</p>
+
+{% endfor %}
+
+
+
+
+<style>
+.lien_civilisation {
+    background-color: #fffaf0;
+    border: 2px solid #c7ad6c;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin: 15px 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    max-width:150px ;}
+
+.lien_civilisation:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);}
+
+.lien_civilisation a {
+    text-decoration: none;
+    color: #4b3a1e;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;}
+
+.lien_civilisation a:hover {
+    color: #8b6b2e;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

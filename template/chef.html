@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for chef in all_chefs %}
+
+
+<div class="chef-card">
+
+    <div class="image_chef">
+        <img src="{{ chef.image }}" alt="{{ chef.nom }}">
+    </div>
+
+    <div class="info">
+        <p>NOM : {{ chef.nom }}</p>
+        <p>ROYAUME : {{ chef.civilisation }}</p>
+    </div>
+
+    <a href="{% url 'detail_chef' chef.id %}" class="btn-detail">
+        Voir plus
+    </a>
+
+</div>
+{% empty %}
+<p>Pas de chef disponible</p>
+
+{% endfor %}
+
+
+
+<style>
+.chef-card {
+    width: 280px;
+    background-color: #fffaf0;
+    border: 2px solid #c7ad6c;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;}
+
+.image_chef img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;}
+
+.info {
+    padding: 15px;}
+
+
+
+.info p {
+    margin: 0;
+    color: #7a5c2e;
+    font-size: 16px;}
+
+.btn-detail {
+    display: block;
+    text-align: center;
+    background-color: #b99b5f;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: bold;
+    transition: 0.3s;}
+
+.btn-detail:hover {
+    background-color: #96793e;}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

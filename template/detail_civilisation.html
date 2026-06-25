@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="detail-container">
+
+    <div class="info_personne">
+        <h2>{{ detail_civilisation.nom }}</h2>
+        <p>{{ detail_civilisation.epoque }}</p>
+    </div>
+
+    <div class="description">
+        <h3>Description</h3>
+        <p>{{ detail_civilisation.Description|linebreaksbr}}</p>   
+    </div>
+
+</div>
+
+
+<style>
+.detail-container {
+    display: flex;
+    gap: 30px;
+    margin: 10px;
+    align-items: flex-start;}
+
+.info_personne {
+    width:100%;
+    max-width: 300px;
+    background-color: #fffaf0;
+    border: 2px solid #c7ad6c;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
+
+.info_personne h2 {
+    margin-top: 0;
+    color: #4b3a1e;
+    font-family: Georgia, serif;}
+
+.info_personne p {
+    color: #7a5c2e;
+    font-size: 18px;}
+
+.description {
+    width:100%;
+    max-width:700px;
+    flex: 1;
+    background-color: #fffaf0;
+    border: 2px solid #c7ad6c;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
+
+.description h3 {
+    margin-top: 0;
+    color: #4b3a1e;
+    font-family: Georgia, serif;}
+
+.description p {
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;}
+
+
+</style>
+
+
+
+{% endblock %}
+
+

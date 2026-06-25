@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<header>
+<nav>
+<p>Civis Chronicle</p>    
+<a href="{% url 'accueil' %}">Accueil</a>
+<a href="{% url 'civilisation' %}">Civilisation</a>
+<a href="{% url 'chef' %}">Chef</a>
+</nav>
+</header>
+    
+<style>
+*{margin:0px;
+box-sizing: border-box;}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;} 
+
+    .detail-container {
+        flex-direction: column;
+    }
+
+    .detail_chef_info {
+        width: 100%;
+    }
+
+    .detail_chef_decription {
+        width: 100%;
+    }
+
+    .image_detail_chef img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info_personne,
+.description {
+    width: 100%;
+    max-width: 100%;
+}
+
+.chef-card {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+}
+
+.lien_civilisation {
+    max-width: 100%;
+}
+
+
+
+}
+
+body {
+height: 100%;
+margin: 0;
+display: flex;
+flex-direction: column;
+min-height: 100vh;}
+
+main {
+flex: 1;}
+header {
+    background-color: #d8c38a; /* jaune parchemin */
+    border-bottom: 3px solid #a88b4a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;}
+
+nav p {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    color: #4b3a1e;
+    margin-right: auto; /* pousse les liens à droite */
+    letter-spacing: 1px;}
+
+nav a {
+    text-decoration: none;
+    color: #4b3a1e;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    margin-left: 30px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s;}
+
+nav a:hover {
+    background-color: #c7ad6c;
+    color: #2e2412;}
+
+footer {
+    background-color: #d8c38a;
+    border-top: 3px solid #a88b4a;
+    margin-top: 50px;
+    padding: 15px 20px;}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;}
+
+.footer-content h3 {
+    color: #4b3a1e;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;}
+
+.footer-content p {
+    color: #5f4b24;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    margin-bottom: 10px;}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.8;}
+
+
+
+
+</style>
+
+<main>
+{% block content %}
+
+
+
+{% endblock %}
+</main>
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <h3>Civis Chronicle</h3>
+        <p class="copyright">
+            © 2026 Civis Chronicle
+            <p>Source et Outil:Wikipedia/Unsplash/Pexels/PostImage</p>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
+
+
+

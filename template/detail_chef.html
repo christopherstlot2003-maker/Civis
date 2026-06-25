@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<div class="detail-container">
+
+    <div class="detail_chef_info">
+        <h2>{{ detail_chef.nom }}</h2>
+        <p>{{ detail_chef.epoque }}</p>
+        <p> {{ detail_chef.civilisation }}</p>
+    </div>
+
+
+    <div class="detail_chef_decription">
+        <h3>Description</h3>
+        <p>{{ detail_chef.Description|linebreaksbr }}</p>
+    </div>
+
+
+</div>
+
+<style>
+.detail-container {
+    display: flex;
+    gap: 30px;
+    margin: 40px;
+    align-items: flex-start;}
+
+.detail_chef_info {
+    width: 320px;
+    background-color: #fffaf0;
+    border: 2px solid #c7ad6c;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
+
+.detail_chef_info h2 {
+    margin-top: 0;
+    color: #4b3a1e;
+    font-family: Georgia, serif;}
+
+.detail_chef_info p {
+    color: #7a5c2e;
+    font-size: 18px;
+    line-height: 1.8;}
+
+.detail_chef_decription {
+    flex: 1;
+    background-color: #fffaf0;
+    border: 2px solid #c7ad6c;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
+
+.detail_chef_decription h3 {
+    margin-top: 0;
+    color: #4b3a1e;
+    font-family: Georgia, serif;}
+
+.detail_chef_decription p {
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;}
+
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
