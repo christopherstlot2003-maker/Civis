@@ -69,15 +69,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'civis',
-        'USER':'postgres',
-        'PASSWORD':'Sarafina123@',
-        'HOST':'127.0.0.1',
-        'PORT':'5432',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'USER': os.environ.get('DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+        'HOST': os.environ.get('DATABASE_HOST'),
+        'PORT': os.environ.get('DATABASE_PORT'),
     }
 }
+
+
 
 
 # Password validation
